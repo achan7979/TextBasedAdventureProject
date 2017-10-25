@@ -22,7 +22,7 @@ public abstract class Room {
         this.items = items;
         this.explored = false;
     }
-
+ 
     public  Person[] getOccupants() {
         return occupants;
     }
