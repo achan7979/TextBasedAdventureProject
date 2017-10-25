@@ -5,8 +5,8 @@ import items.Item;
 
 import java.util.Arrays;
 
-public abstract class Room {
-
+public abstract class Room 
+{
     private boolean[] doors;
     private Person[] occupants;
     private Item[] items;

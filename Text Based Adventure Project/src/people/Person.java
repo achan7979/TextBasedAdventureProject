@@ -1,7 +1,7 @@
 package people;
 
-public class Person {
-
+public class Person 
+{
 	public String chooseMove() 
 	{
 		return null;

@@ -6,8 +6,8 @@ import people.Person;
 
 import java.util.Scanner;
 
-public class GameRunner {
-
+public class GameRunner 
+{
     public static void main (String[] args)
     {
         Room[][] map = new Room[5][5];

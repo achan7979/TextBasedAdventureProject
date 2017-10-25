@@ -1,5 +1,6 @@
 package game;
 
-public class School {
+public class School 
+{
 
 }
