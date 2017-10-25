@@ -3,7 +3,6 @@ package rooms;
 import people.Person;
 import items.Item;
 
-
 public class Hallway extends Room {
 
     public Hallway(boolean[] doors, Person[] people, Item[] items, int x, int y)
