@@ -27,7 +27,7 @@ public class GameRunner
 
         School tech = new School(map);
 
-
+     
         boolean gameOn = true;
         Person player1 = Utilities.createPerson();
         Scanner in = new Scanner(System.in);
