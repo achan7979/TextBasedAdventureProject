@@ -5,7 +5,7 @@ import rooms.*;
 import people.Person;
 
 import java.util.Scanner;
-
+import java.util.Scanner;
 public class GameRunner 
 {
     public static void main (String[] args)
@@ -27,9 +27,11 @@ public class GameRunner
 
         School tech = new School(map);
 
-     
+        Scanner x = new Scanner(System.in);
         boolean gameOn = true;
-        Person player1 = Utilities.createPerson();
+        System.out.println("Please enter your first and last name, gender and age in this specific order. Be sure to hit the enter key."
+        		+ " after every new input.");
+        Person player1 = new Person(x.next(), x.next(), x.next(), x.nextInt());
         Scanner in = new Scanner(System.in);
         while(gameOn)
         {

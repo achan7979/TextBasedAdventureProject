@@ -2,12 +2,9 @@ package board;
 
 import rooms.Room;
 
-public class Board {
-
-
+public class Board 
+{
     private Room[][] schoolMap;
-
-
 
     public Board(Room[][] schoolMap)
     {
@@ -16,8 +13,6 @@ public class Board {
 
     public void printMap()
     {
-
-
         for(Room[] row : schoolMap)
         {
             for (Room room : row)
@@ -27,13 +22,15 @@ public class Board {
             System.out.println();
         }
     }
-    public Room[][] getSchoolMap() {
+    
+    public Room[][] getSchoolMap() 
+    {
         return schoolMap;
     }
 
-    public void setSchoolMap(Room[][] schoolMap) {
+    public void setSchoolMap(Room[][] schoolMap) 
+    {
         this.schoolMap = schoolMap;
     }
-
 
 }

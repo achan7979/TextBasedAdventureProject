@@ -1,8 +1,6 @@
 package people;
-
-import rooms.Room;
-
 import java.util.Scanner;
+import rooms.Room;
 
 public class Person 
 {
@@ -10,19 +8,18 @@ public class Person
 	private String lastName;
 	private String gender;
 	private int age;
-	
-	public Person()
+	static Scanner x = new Scanner(System.in);
+	public Person(String firstName, String lastName, String gender, int age)
 	{
-		this.firstName = x.next();
-		this.lastName = x.next();
-		this.gender = x.next();
-		this.age = x.nextInt();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.gender = gender;
+		this.age = age;
 	}
-
-	Scanner x = new Scanner(System.in);
+	
 	public String chooseMove() 
 	{
-		return null;
+		if(x.next() == "n" )
 	}
 
 	public String getFirstName() 
@@ -32,6 +29,17 @@ public class Person
 
 	public void setRoom(Room room) 
 	{
+		
+	}
+
+	public char[] print() 
+	{
+		
+	}
+
+	public void printRoom() 
+	{
+		
 		
 	}
 
