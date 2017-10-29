@@ -29,9 +29,9 @@ public class GameRunner
 
         Scanner x = new Scanner(System.in);
         boolean gameOn = true;
-        System.out.println("Please enter your first and last name, gender and age in this specific order. Be sure to hit the enter key."
+        System.out.println("Please enter your first and last name, gender and date of birth in this specific order. Be sure to hit the enter key."
         		+ " after every new input.");
-        Person player1 = new Person(x.next(), x.next(), x.next(), x.nextInt());
+        Person player1 = new Person(x.next(), x.next(), x.next(), x.next());
         Scanner in = new Scanner(System.in);
         while(gameOn)
         {
@@ -40,7 +40,8 @@ public class GameRunner
 
             tech.printMap();
             player1.printRoom();
-            String move = player1.chooseMove();
+            String move = player1.chooseMove(x);
+            
             Utilities.movePlayer(tech, player1,move);
             //gameOn = false;
             

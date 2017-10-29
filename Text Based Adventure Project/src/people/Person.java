@@ -9,7 +9,7 @@ public class Person
 	private String gender;
 	private int age;
 	static Scanner x = new Scanner(System.in);
-	public Person(String firstName, String lastName, String gender, int age)
+	public Person(String firstName, String lastName, String gender, String DOB )
 	{
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -17,9 +17,16 @@ public class Person
 		this.age = age;
 	}
 	
-	public String chooseMove() 
+	public String chooseMove(Scanner in) 
 	{
-		if(x.next() == "n" )
+		String response = "";
+		System.out.println("Where would you like to move, " + this.firstName + "?");
+		if(in.next() == "n" || in.next() == "N")
+		{
+			response = "North";
+			System.out.println("You have moved into a room");
+		}
+		return response;
 	}
 
 	public String getFirstName() 
