@@ -4,11 +4,10 @@ import rooms.Room;
 
 public class Person 
 {
-	private String firstName;
+	public String firstName;
 	private String lastName;
 	private String gender;
 	private int age;
-	static Scanner x = new Scanner(System.in);
 	public Person(String firstName, String lastName, String gender, String DOB )
 	{
 		this.firstName = firstName;
@@ -17,16 +16,28 @@ public class Person
 		this.age = age;
 	}
 	
-	public String chooseMove(Scanner in) 
+	public String chooseMove(String string) 
 	{
-		String response = "";
-		System.out.println("Where would you like to move, " + this.firstName + "?");
-		if(in.next() == "n" || in.next() == "N")
+		if(string.equals("n") || string.equals("N") || string.equals("north") || string.equals("North"))
 		{
-			response = "North";
-			System.out.println("You have moved into a room");
+			return "You move down a deep dark eerie hallway a few meters";
 		}
-		return response;
+		else if(string.equals("s") || string.equals("S") || string.equals("south") || string.equals("South"))
+		{
+			return "You move into a room";
+		}
+		else if(string.equals("e") || string.equals("E") || string.equals("east") || string.equals("East"))
+		{
+			return "East";
+		}
+		else if(string.equals("w") || string.equals("W") || string.equals("west") || string.equals("West"))
+		{
+			return "West";
+		}
+		else
+		{
+			return "Please enter a valid direction.";
+		}
 	}
 
 	public String getFirstName() 
@@ -49,5 +60,6 @@ public class Person
 		
 		
 	}
+
 
 }

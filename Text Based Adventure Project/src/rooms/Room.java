@@ -54,6 +54,15 @@ public abstract class Room
     {
     	return y;
     }
+    
+    public String createDescription()
+    {
+    	if(doors[3]) 
+    	{
+    		String tempstring = "you see a door to the east";
+    	}
+    	return tempstring;
+    }
     public abstract void print();
 
 

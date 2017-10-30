@@ -29,20 +29,21 @@ public class GameRunner
 
         Scanner x = new Scanner(System.in);
         boolean gameOn = true;
-        System.out.println("Please enter your first and last name, gender and date of birth in this specific order. Be sure to hit the enter key."
+        System.out.println("Please enter your first and last name, gender and date of birth in this specific order. Be sure to hit the enter key"
         		+ " after every new input.");
         Person player1 = new Person(x.next(), x.next(), x.next(), x.next());
-        Scanner in = new Scanner(System.in);
+        System.out.println("Welcome to the Halls of Tech, " + player1.getFirstName());
+    	Scanner in = new Scanner(System.in);
         while(gameOn)
         {
-            System.out.println("Welcome to the Halls of Tech, " + player1.getFirstName());
             map[0][0].addOccupant(player1);
-
             tech.printMap();
             player1.printRoom();
-            String move = player1.chooseMove(x);
+    		System.out.println("Where would you like to move, " + player1.firstName + "?");
+            String response = in.next();
+            System.out.println(player1.chooseMove(response.toString()));
             
-            Utilities.movePlayer(tech, player1,move);
+            //Utilities.movePlayer(tech, player1,move);
             //gameOn = false;
             
 
