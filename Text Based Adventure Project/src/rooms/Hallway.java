@@ -12,13 +12,9 @@ public class Hallway extends Room
 
     public void print()
     {
-        if (getOccupants().length != 0)
+        if (this.explored)
         {
-            System.out.print(getOccupants()[0].print());
-        }
-        else if (this.explored)
-        {
-            System.out.print("[ H ]");
+            System.out.print("[ E ]");
         }
         else
         {

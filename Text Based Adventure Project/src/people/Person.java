@@ -1,14 +1,18 @@
 package people;
+import java.util.Map;
 import java.util.Scanner;
+
+import board.Board;
 import rooms.Room;
 
 public class Person 
 {
 	public String firstName;
-	private String lastName;
-	private String gender;
-	private int age;
-	public Person(String firstName, String lastName, String gender, String DOB )
+	public String lastName;
+	public String gender;
+	public String age;
+	
+	public Person(String firstName, String lastName, String gender, String age)
 	{
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -16,23 +20,47 @@ public class Person
 		this.age = age;
 	}
 	
-	public String chooseMove(String string) 
+	public String chooseMove(Board factory, String move, int xPos, int yPos) 
 	{
-		if(string.equals("n") || string.equals("N") || string.equals("north") || string.equals("North"))
+		if(move.equals("n") || move.equals("N") || move.equals("north") || move.equals("North"))
 		{
-			return "You move down a deep dark eerie hallway a few meters";
+			if(yPos == 1)
+				return "You cannot move north anymore, there is a wall. Please try another move.";
+			else
+			{
+				yPos--;
+				return "You move to the north.";
+			}
 		}
-		else if(string.equals("s") || string.equals("S") || string.equals("south") || string.equals("South"))
+		else if(move.equals("s") || move.equals("S") || move.equals("south") || move.equals("South"))
 		{
-			return "You move into a room";
+			if(yPos == 5)
+				return "You cannot move south anymore, there is a wall. Please try another move.";
+			else
+			{
+				yPos++;
+				return "You move to the south.";
+			}
 		}
-		else if(string.equals("e") || string.equals("E") || string.equals("east") || string.equals("East"))
+		else if(move.equals("e") || move.equals("E") || move.equals("east") || move.equals("East"))
 		{
-			return "East";
+			if(xPos == 5)
+				return "You cannot move east anymore, there is a wall. Please try another move.";
+			else
+			{
+				xPos++;
+				return "You move to the east.";
+			}
 		}
-		else if(string.equals("w") || string.equals("W") || string.equals("west") || string.equals("West"))
+		else if(move.equals("w") || move.equals("W") || move.equals("west") || move.equals("West"))
 		{
-			return "West";
+			if(xPos == 1)
+				return "You cannot move west anymore, there is a wall. Please try another move.";
+			else
+			{
+				xPos--;
+				return "You move to the west.";
+			}
 		}
 		else
 		{
@@ -40,19 +68,14 @@ public class Person
 		}
 	}
 
-	public String getFirstName() 
-	{
-		return this.firstName;
-	}
-
 	public void setRoom(Room room) 
 	{
 		
 	}
 
-	public char[] print() 
+	public String print() 
 	{
-		
+		if();
 	}
 
 	public void printRoom() 
