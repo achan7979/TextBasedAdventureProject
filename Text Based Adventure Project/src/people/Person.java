@@ -4,13 +4,15 @@ import java.util.Scanner;
 
 import board.Board;
 import rooms.Room;
-
+import game;
 public class Person 
 {
 	public String firstName;
 	public String lastName;
 	public String gender;
 	public String age;
+	public int xPos = 1;
+	public int yPos = 1;
 	
 	public Person(String firstName, String lastName, String gender, String age)
 	{
@@ -20,7 +22,7 @@ public class Person
 		this.age = age;
 	}
 	
-	public String chooseMove(Board factory, String move, int xPos, int yPos) 
+	public String chooseMove(Board factory, String move) 
 	{
 		if(move.equals("n") || move.equals("N") || move.equals("north") || move.equals("North"))
 		{
@@ -28,7 +30,7 @@ public class Person
 				return "You cannot move north anymore, there is a wall. Please try another move.";
 			else
 			{
-				yPos--;
+				yPos = yPos - 1;
 				return "You move to the north.";
 			}
 		}
@@ -38,7 +40,7 @@ public class Person
 				return "You cannot move south anymore, there is a wall. Please try another move.";
 			else
 			{
-				yPos++;
+				yPos = yPos + 1;
 				return "You move to the south.";
 			}
 		}
@@ -48,7 +50,7 @@ public class Person
 				return "You cannot move east anymore, there is a wall. Please try another move.";
 			else
 			{
-				xPos++;
+				xPos = xPos + 1;
 				return "You move to the east.";
 			}
 		}
@@ -58,7 +60,7 @@ public class Person
 				return "You cannot move west anymore, there is a wall. Please try another move.";
 			else
 			{
-				xPos--;
+				xPos = xPos - 1;
 				return "You move to the west.";
 			}
 		}

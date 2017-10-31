@@ -57,9 +57,10 @@ public abstract class Room
     
     public String createDescription()
     {
+    	String tempstring = null;
     	if(doors[3]) 
     	{
-    		String tempstring = "you see a door to the east";
+    		tempstring = "you see a door to the east";
     	}
     	return tempstring;
     }
