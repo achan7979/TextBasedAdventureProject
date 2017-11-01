@@ -1,10 +1,9 @@
 package people;
-import java.util.Map;
 import java.util.Scanner;
 
 import board.Board;
 import rooms.Room;
-import game;
+import game.GameRunner;
 public class Person 
 {
 	public String firstName;
@@ -27,7 +26,8 @@ public class Person
 		if(move.equals("n") || move.equals("N") || move.equals("north") || move.equals("North"))
 		{
 			if(yPos == 1)
-				return "You cannot move north anymore, there is a wall. Please try another move.";
+				return "As you try to move, you bump into a wall. Its rough and dusty. The way you came in from"
+						+ "is blocked off by rubble.";
 			else
 			{
 				yPos = yPos - 1;
@@ -37,7 +37,7 @@ public class Person
 		else if(move.equals("s") || move.equals("S") || move.equals("south") || move.equals("South"))
 		{
 			if(yPos == 5)
-				return "You cannot move south anymore, there is a wall. Please try another move.";
+				return "You attempt to continue moving, however you run into a wall. Its wet and smells of iron.";
 			else
 			{
 				yPos = yPos + 1;
@@ -47,7 +47,8 @@ public class Person
 		else if(move.equals("e") || move.equals("E") || move.equals("east") || move.equals("East"))
 		{
 			if(xPos == 5)
-				return "You cannot move east anymore, there is a wall. Please try another move.";
+				return "You try to move, but encounter a wall of what seems like is made of metal. "
+						+ "It may be a large loading bay door, but you are uncertain.";
 			else
 			{
 				xPos = xPos + 1;
@@ -57,7 +58,7 @@ public class Person
 		else if(move.equals("w") || move.equals("W") || move.equals("west") || move.equals("West"))
 		{
 			if(xPos == 1)
-				return "You cannot move west anymore, there is a wall. Please try another move.";
+				return "You run into shipping containers that block off the exit.";
 			else
 			{
 				xPos = xPos - 1;
@@ -77,7 +78,7 @@ public class Person
 
 	public String print() 
 	{
-		if();
+		return "";
 	}
 
 	public void printRoom() 
